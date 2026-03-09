@@ -17,7 +17,8 @@ Extracción, limpieza y creación de BBDD en MySQL para jerarquizar los resultad
 4. [Estructura del repositorio](#2-estructura-del-repositorio)
 5. [Fuente de los datos](#3-fuente-de-los-datos)
 6. [Esquema de la base de datos](#5-esquema-de-la-base-de-datos)
-7. [Autoras y metodología](#7-autoras-y-metodología)
+7. [Bonus: Automatización de Playlists](#7-bonus-automatización-de-playlists)
+8. [Autoras y metodología](#7-autoras-y-metodología)
 
 
 # 1. El Proyecto
@@ -109,12 +110,25 @@ Los datos han sido obtenidos mediante el consumo de las APIs oficiales de las pl
 La información se jerarquiza en una base de datos relacional diseñada para optimizar las consultas por año y género.
 
 
-## 7. Autoras y metodología
+## 7. ✨ Bonus: Del dato a la realidad (Automatización)
+Como valor añadido a la extracción de datos, desarrollé un script de **automatización** que transforma los archivos CSV resultantes en playlists reales de Spotify. 
+
+### ¿Por qué este paso?
+Mientras trabajábamos grupalmente en el proyecto se me ocurrió ir más allá del análisis estadístico y crear un **producto tangible**. Este script permite:
+* **Validación auditiva:** Confirmar que los datos extraídos corresponden a las tendencias reales.
+* **Escalabilidad:** Generar listas de reproducción segmentadas por género y año de forma masiva (procesando bloques de canciones automáticamente para optimizar las peticiones a la API).
+* **Experiencia de Usuario:** Convertir un dataset técnico en una experiencia cultural compartible.
+* **Hito Técnico:** El script gestiona flujos de autenticación `OAuth`, maneja errores de codificación y utiliza una lógica de *batch processing* (chunks) para cumplir con los límites de la API de Spotify.
+
+> 🎧 **Escucha el resultado final:** > [🎶 Acceder a la Playlist: Rhythm of Lockdown - Country Hits](https://open.spotify.com/playlist/5zUhMeqrC1Gxz1UfIyeQiK?si=a833e9c747b2428f)
+
+
+## 8. Autoras y metodología
 Este proyecto ha sido desarrollado bajo la metodología ágil **SCRUM**, aplicando un flujo de trabajo colaborativo para la gestión de tareas y control de versiones.
 
-* 👩‍💻 **[Violeta] (https://github.com/violetanys)**
-* 👩‍💻 **[María Gómez] (https://github.com/mariagmzm)** 
-* 👩‍💻 **[Micaela Lafratta] (https://github.com/micaelalafratta)** 
-* 👩‍💻 **[Ona Z. Fernández] (https://github.com/omniaunusest)** 
+* 👩‍💻 **Violeta (https://github.com/violetanys)**
+* 👩‍💻 **María Gómez (https://github.com/mariagmzm)** 
+* 👩‍💻 **Micaela Lafratta (https://github.com/micaelalafratta)** 
+* 👩‍💻 **Ona Z. Fernández (https://github.com/omniaunusest)** 
 * 👩‍💻 **Andrea R. Virgós** 
 
