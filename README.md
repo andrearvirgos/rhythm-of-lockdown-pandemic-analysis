@@ -1,41 +1,48 @@
-# Análisis de tendencias musicales (2018-2022): pre-pandemia, pandemia y post-pandemia
+# Rhythm of Lockdown: A Pandemic Analysis
 
-Extracción, limpieza y creación de BB. DD. en MySQL para jerarquizar los resultados a partir de datos obtenidos a través de las APIS de Spotify y last.fm.
+## **¿Cómo cambió nuestro ritmo durante el confinamiento?** 
 
+Análisis de tendencias musicales (2018-2022): pre-pandemia, pandemia y post-pandemia
 La elección de este rango de años tiene el propósito de obtener una muestra sobre cómo fueron las tendencias musicales en torno a la pandemia de COVID-19 y, con estos datos, invitar a una pequeña reflexión acerca de cómo impactan los eventos de carácter mundial en las necesidades e intereses musicales de las personas.
+
+Extracción, limpieza y creación de BBDD en MySQL para jerarquizar los resultados a partir de datos obtenidos a través de las APIS de Spotify y last.fm.
+
+
 
 ## Índice
 
-1. [Objetivos](#1-objetivos)
-2. [¿Cómo usar esto?](#2-cómo-usar-esto)
-3. [Estructura del repositorio](#2-estructura-del-repositorio)
-4. [Fuente de los datos](#3-fuente-de-los-datos)
-5. [Esquema de la base de datos](#5-esquema-de-la-base-de-datos)
-7. [Autoras y licencias](#7-autoras-y-licencia)
+1. [El Proyecto](#1-el-proyecto)
+2. [Stack Tecnológico](#2-stack-tecnológico)
+3. [Guía de Uso y Configuración](#3-guía-de-uso-y-configuración)
+4. [Estructura del repositorio](#2-estructura-del-repositorio)
+5. [Fuente de los datos](#3-fuente-de-los-datos)
+6. [Esquema de la base de datos](#5-esquema-de-la-base-de-datos)
+7. [Autoras y metodología](#7-autoras-y-metodología)
 
-# 1. Objetivos
 
-- Consolidar conocimientos de Python y SQL.
-- Practicar Git/GitHub y SCRUM en equipo.
-- Analizar y albergar un estudio sobre tendencias musicales entre los años 2018 y 2022, cuya estructura de código puede usarse para explorar otros rangos y años.
+# 1. El Proyecto
 
-## 2. Cómo usar esto
+Este análisis nace de la curiosidad por entender cómo eventos de carácter mundial impactan en las necesidades e intereses musicales de las personas. 
 
-Python 3.8 o superior.
+Mediante la **extracción, limpieza y creación de bases de datos**, analizamos las tendencias en tres etapas críticas:
+* **Pre-pandemia (2018-2019):** El ritmo habitual.
+* **Lockdown (2020-2021):** El sonido del aislamiento.
+* **Post-pandemia (2022):** La nueva normalidad sonora.
 
-MySQL-Worbench *aquí hay que poner la versión que sea*
+El objetivo es ofrecer una reflexión sobre el consumo cultural y proporcionar una **infraestructura de código escalable** para explorar otros rangos temporales.
 
-- Librerías:
 
-    *pandas*
-`pip install pandas`
+## 2. Stack Tecnológico
 
-    *spotipy*
-`pip install spotipy`
+* **Lenguaje:** Python 3.8+ 
+* **Base de Datos:** MySQL Workbench 
+* **Librerías principales:**
+    * `pandas` (Tratamiento y limpieza de datos)
+    * `spotipy` (Conexión API Spotify)
+    * `python-dotenv` (Gestión de credenciales seguras)
 
-    *python-dotenv*
-`pip install python-dotenv`
 
+## 3. Guía de Uso y Configuración
 ### Instrucciones para usar python-dotenv (una librería que permite cargar variables de entorno desde un archivo *.env* a tu código Python)
 
 1. Instala *python-dotenv*
@@ -65,47 +72,49 @@ MySQL-Worbench *aquí hay que poner la versión que sea*
 ### Instrucciones para replicar el proyecto:
 **Clona este repositorio:**
 
-    git clone https://github.com/micaelalafratta/da-promo-60-modulo2-equipo3.git
+    git clone https://github.com/andrearvirgos/Rhythm-of-Lockdown-Pandemic-Analysis.git
 
 Es recomendable tener cuenta de desarrollador en [Spotify](https://developer.spotify.com/) para obtener `CLIENT_ID` y `CLIENT_SECRET` (las credenciales para el uso de la API) para poder ejecutar una nueva extracción de datos.
 
-## 3. Estructura del repositorio
+
+## 4. Estructura del repositorio
 
         este_repositorio/
         |
-        ├── extracción-spotify-spotipy
+        ├── extracción-spotify-spotipy             # Notebooks organizados por género
         │   ├── country/
         │   ├── metal/
         │   ├── pop/
         │   ├── r&b/
         │   └── rock/
         |
-        ├── extracción-last.fm/
-        ├── working_agreement.md
-        └── README.md
+        ├── extracción-last.fm/                    # Scripts de apoyo y cruce con Last.fm
+        ├── working_agreement.md                   # Protocolo de trabajo en equipo (SCRUM)
+        └── README.md                              # Documentación principal
 
 
 
-### 4. Fuente de los datos
+## 5. Fuente de los datos
 
-*-----> Aquí va el origen de los datos (API) y fecha de obtención.*
+Los datos han sido obtenidos mediante el consumo de las APIs oficiales de las plataformas musicales más relevantes, garantizando la fiabilidad de las métricas de popularidad y metadatos:
 
-Datos obtenidos de la API de Spotify para desarroladores en octubre 2025 **hay que insertar enlace**.
+* **[Spotify for Developers](https://developer.spotify.com/documentation/web-api/):** Utilizada para la extracción de métricas de popularidad, ID de pistas y categorización por géneros.
+* **[Last.fm API](https://www.last.fm/api):** Utilizada como fuente complementaria para el cruce de datos y el análisis de tendencias de escucha global.
+
+> **Fecha de obtención:** Octubre de 2025.
 
 
-## 5. Esquema de la base de datos
+## 6. Esquema de la base de datos
 
-Diagrama o tabla con las tablas, columnas y relaciones.
+La información se jerarquiza en una base de datos relacional diseñada para optimizar las consultas por año y género.
 
-## 6. Ejemplo de uso
 
-Consulta SQL básica para validar la carga.
+## 7. Autoras y metodología
+Este proyecto ha sido desarrollado bajo la metodología ágil **SCRUM**, aplicando un flujo de trabajo colaborativo para la gestión de tareas y control de versiones.
 
-*Ejemplo:*
+* 👩‍💻 **Violeta**
+* 👩‍💻 **María Gómez** 
+* 👩‍💻 **Micaela Lafratta** 
+* 👩‍💻 **Ona Z. Fernández** 
+* 👩‍💻 **Andrea R. Virgós** 
 
-`SELECT COUNT() FROM ventas;`
-
-#
-## 7. Autoras y licencia
-
-Nombres de las colaboradoras y tipo de licencia (MIT, GPL, etc.).
