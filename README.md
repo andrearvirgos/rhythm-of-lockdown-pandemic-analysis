@@ -112,9 +112,9 @@ La información se jerarquiza en una base de datos relacional diseñada para opt
 ## 7. Autoras y metodología
 Este proyecto ha sido desarrollado bajo la metodología ágil **SCRUM**, aplicando un flujo de trabajo colaborativo para la gestión de tareas y control de versiones.
 
-* 👩‍💻 **Violeta**
-* 👩‍💻 **María Gómez** 
-* 👩‍💻 **Micaela Lafratta** 
-* 👩‍💻 **Ona Z. Fernández** 
+* 👩‍💻 **[Violeta] (https://github.com/violetanys)**
+* 👩‍💻 **[María Gómez] (https://github.com/mariagmzm)** 
+* 👩‍💻 **[Micaela Lafratta] (https://github.com/micaelalafratta)** 
+* 👩‍💻 **[Ona Z. Fernández] (https://github.com/omniaunusest)** 
 * 👩‍💻 **Andrea R. Virgós** 
 
